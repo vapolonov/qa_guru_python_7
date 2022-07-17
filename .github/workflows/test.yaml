@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
       - name: Install dependencies
         run: |
-          pytest --alluredir=allure_results
+          pytest --alluredir=allure-results
 
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          allure_results: allure_results
+          allure_results: allure-results
           allure_history: allure-history
           keep_reports: 20
 
