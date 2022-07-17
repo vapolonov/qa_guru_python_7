@@ -2,7 +2,7 @@ from selene.support.shared import browser
 import pytest
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='function')
 def browser_management():
     browser.config.base_url = 'https://github.com'
     browser.config.browser_name = 'chrome'

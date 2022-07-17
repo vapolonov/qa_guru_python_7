@@ -4,7 +4,7 @@ from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
 
 
-def test_github():
+def test_github(browser_management):
     browser.open('/')
 
     s(".header-search-input").click()

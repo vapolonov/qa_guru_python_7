@@ -5,7 +5,7 @@ from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
 
 
-def test_dynamic_steps():
+def test_dynamic_steps(browser_management):
     with allure.step('Open main page'):
         browser.open('/')
 
@@ -24,7 +24,7 @@ def test_dynamic_steps():
         s(by.partial_text('#76')).should(be.visible)
 
 
-def test_decorator_steps():
+def test_decorator_steps(browser_management):
     open_main_page()
     search_the_repository('eroshenkoam/allure-example')
     go_to_repository('eroshenkoam/allure-example')
