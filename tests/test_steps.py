@@ -7,7 +7,7 @@ from selene.support.shared.jquery_style import s
 
 def test_dynamic_steps(browser_management):
     with allure.step('Open main page'):
-        browser.open('https://github.com')
+        browser.open('/')
 
     with allure.step('Search the repository'):
         s('.header-search-button').click()
@@ -33,7 +33,7 @@ def test_decorator_steps(browser_management):
 
 @allure.step('Open main page')
 def open_main_page():
-    browser.open('https://github.com')
+    browser.open('/')
 
 
 @allure.step('Search the repository {repo}')
