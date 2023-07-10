@@ -12,7 +12,7 @@ jobs:
       - name: Install chrome
         uses: browser-actions/setup-chrome@v1
       - run: chrome --version
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
