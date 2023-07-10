@@ -5,7 +5,7 @@ from selene.support.shared.jquery_style import s
 
 
 def test_github(browser_management):
-    browser.open('/')
+    browser.open('https://github.com')
 
     s('.header-search-button').click()
     s('#query-builder-test').send_keys("eroshenkoam/allure-example").press_enter()
