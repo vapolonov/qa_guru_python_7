@@ -10,9 +10,8 @@ def test_dynamic_steps(browser_management):
         browser.open('/')
 
     with allure.step('Search the repository'):
-        s('.header-search-input').click()
-        s('.header-search-input').send_keys('eroshenkoam/allure-example')
-        s('.header-search-input').submit()
+        s('.header-search-button').click()
+        s('#query-builder-test').send_keys("eroshenkoam/allure-example").press_enter()
 
     with allure.step('Go to repository link'):
         s(by.link_text('eroshenkoam/allure-example')).click()
@@ -39,9 +38,8 @@ def open_main_page():
 
 @allure.step('Search the repository {repo}')
 def search_the_repository(repo):
-    s('.header-search-input').click()
-    s('.header-search-input').send_keys(repo)
-    s('.header-search-input').submit()
+    s('.header-search-button').click()
+    s('#query-builder-test').send_keys(repo).press_enter()
 
 
 @allure.step('Go to repository link {repo}')

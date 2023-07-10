@@ -7,9 +7,8 @@ from selene.support.shared.jquery_style import s
 def test_github(browser_management):
     browser.open('/')
 
-    s(".header-search-input").click()
-    s(".header-search-input").send_keys("eroshenkoam/allure-example")
-    s(".header-search-input").submit()
+    s('.header-search-button').click()
+    s('#query-builder-test').send_keys("eroshenkoam/allure-example").press_enter()
 
     s(by.link_text("eroshenkoam/allure-example")).click()
 
