@@ -1,0 +1,4 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","","","0","0","4","0","0"
+"","Tasks in the repository","Authorized user can create a task in the repository","0","0","1","0","0"
+"","Tasks in the repository","Unauthorized user can't create an issue in the repository","0","0","1","0","0"
