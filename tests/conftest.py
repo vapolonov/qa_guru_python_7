@@ -15,5 +15,7 @@ def browser_management():
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
     browser.config.driver_options = options
+
     yield
+
     browser.quit()
