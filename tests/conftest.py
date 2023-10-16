@@ -2,6 +2,8 @@ from selene.support.shared import browser
 import pytest
 from selenium import webdriver
 
+from tests import test_attachments
+
 
 @pytest.fixture(scope='function', autouse=True)
 def browser_management():
@@ -19,3 +21,5 @@ def browser_management():
     yield
 
     browser.quit()
+
+    test_attachments.attachments()
